@@ -16,11 +16,7 @@ class DQNAgent:
         self.epsilon_decay = 0.995
         self.learning_rate = 0.001
         self.model = NeuralNetwork(state_size, 24, action_size)
-        
-
-
-    def remember(self, state, action, reward, next_state, done):
-        self.memory.append((state, action, reward, next_state, done))
+    
         
     def act(self, state):
         if np.random.rand() <= self.epsilon:
